@@ -1,0 +1,148 @@
+.footer {
+    padding: 90px 0 0 0;
+
+    @include phones() {
+        padding-top: 50px;
+    }
+
+    .footer__container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 90px;
+
+        @include tablets() {
+            flex-wrap: wrap;
+        }
+
+        @include phones() {
+            flex-direction: column;
+            padding-bottom: 50px;
+            align-items: flex-start;
+        }
+    }
+    
+    .footer__nav {
+        display: flex;
+        flex-direction: column;
+
+        @include phones() {
+            margin-bottom: 50px;
+        }
+    }
+
+    .footer__btn {
+        @include tablets() {
+            width: 250px;
+        }
+
+        @include phones() {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+    
+    .nav__link {
+        color: #8993ad;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    
+    .footer__contacts {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .contacts__link {
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        color: #000000;
+        margin-bottom: 35px;
+
+        @include phones() {
+            font-size: 20px;
+        }
+    }
+    
+    .footer__contacts .contacts__link--phone::before {
+        content: '';
+        background: url('../images//icons/phone.png');
+        width: 18px;
+        height: 18px;
+        margin-right: 20px;
+    }
+    
+    .footer__contacts .contacts__link--mail::before {
+        content: '';
+        background: url('../images//icons/email.png');
+        width: 23px;
+        height: 15px;
+        margin-right: 20px;
+    }
+    
+    .contacts__link .link__img {
+        margin-right: 20px;
+    }
+    
+    .footer__callback {
+        display: flex;
+        flex-direction: column;
+
+        @include phones() {
+            width: 100%;
+        }
+    }
+    
+    .callback__soc {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+    }
+    
+    .soc__item {
+        margin-right: 30px;
+    }
+    
+    .soc__item .item__link {
+        transition: .3s;
+        opacity: .5;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        background-size: contain;
+    }
+    
+    .soc__item .item__link--vk {
+        background: url('../images//icons/vk.png') center center no-repeat;
+        width: 35px;
+    }
+    
+    .soc__item .item__link--fb {
+        background: url('../images//icons/fb.png') center center no-repeat;
+    }
+    
+    .soc__item .item__link--twitter {
+        background: url('../images//icons/twitter.png') center center no-repeat;
+    }
+    
+    .soc__item .item__link--inst {
+        background: url('../images//icons/inst.png') center center no-repeat;
+    }
+    
+    .soc__item .item__link:hover {
+        opacity: 1;
+    }
+    
+    .footer__bottom {
+        padding: 30px 0;
+        background: #31293c;
+        color: #fff;
+        text-align: center;
+
+        @include phones() {
+            padding: 20px 0;
+        }
+    }
+}

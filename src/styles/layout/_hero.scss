@@ -1,0 +1,292 @@
+.hero {
+    background: #fbfbfb;
+    background-image: url('../images//hero-ava.png'), url('../images//hero-el.png');
+    background-position: 100% bottom, 125% bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+
+    @include tablets() {
+        padding-top: 0;
+        background-position: 98% bottom, 150% bottom;
+    }
+
+    @include tablets-phones() {
+        background-position: center top, right top;
+        background-size: auto 60%;
+    }
+
+    .hero__container {
+        @include tablets-phones() {
+            padding-top: 450px;
+        }
+    }
+
+    .hero__title {
+        font-size: 80px;
+        font-weight: 400;
+        margin: 0;
+        margin-bottom: 20px;
+        z-index: 10;
+    
+        @include tablets() {
+            font-size: 54px;
+        }
+
+        @include tablets-phones() {
+            font-size: 30px;
+        }
+    }
+    
+    .hero__text {
+        font-size: 25px;
+        font-weight: 400;
+        color: #8993ad;
+        margin: 0;
+        margin-bottom: 45px;
+    
+        @include tablets() {
+            font-size: 20px;
+        }
+
+        @include tablets-phones() {
+            ont-size: 16px;
+        }
+    }
+
+    .hero__btn {
+        @include tablets-phones() {
+            width: 100%;
+        }
+    }
+    
+    .hero__decor {
+        color: #f74971;
+        font-size: 29px;
+        font-weight: 700;
+        position: absolute;
+        display: block;
+        left: -200px;
+        transition: 2s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        z-index: 1;
+        margin: 0;
+    }
+    
+    .hero__decor--div-1 {
+        animation-name: div-1;
+    
+        @include tablets() {
+            animation-name: div-1-tablets;
+        }
+
+        @include phones() {
+            animation-name: div-1-phones;
+        }
+    }
+    
+    .hero__decor--div-2 {
+        animation-name: div-2;
+    
+        @include tablets() {
+            animation-name: div-2-tablets;
+        }
+
+        @include phones() {
+            animation-name: div-2-phones;
+        }
+    }
+    
+    .hero__decor--slash {
+        animation-name: slash;
+        font-size: 38px;
+    
+        @include tablets() {
+            animation-name: slash-tablets;
+            font-size: 38px;
+        }
+
+        @include phones() {
+            animation-name: slash-phones;
+            font-size: 38px;
+        }
+    }
+    
+    .hero__decor--hash {
+        animation-name: hash;
+        font-size: 55px;
+    
+        @include tablets() {
+            animation-name: hash-tablets;
+            font-size: 55px;
+        }
+
+        @include phones() {
+            animation-name: hash-phones;
+            font-size: 55px;
+        }
+    }
+    
+    .hero__decor--hooks {
+        animation-name: hooks;
+    
+        @include tablets() {
+            animation-name: hooks-tablets;
+        }
+
+        @include phones() {
+            animation-name: hooks-phones;
+        }
+    }
+}
+
+@keyframes div-1 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(650px, 200px) rotate(30deg);
+    }
+}
+
+@keyframes div-2 {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(700px, -100px) rotate(-20deg);
+    }
+}
+
+@keyframes slash {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(350px, 300px) rotate(-20deg);
+    }
+}
+
+@keyframes hash {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(250px, -50px) rotate(20deg);
+    }
+}
+
+@keyframes hooks {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(250px, -150px) rotate(20deg);
+    }
+}
+
+@keyframes div-1-tablets {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes div-2-tablets {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(660px, 0px) rotate(-20deg);
+    }
+}
+
+@keyframes slash-tablets {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(450px, 225px) rotate(-20deg);
+    }
+}
+
+@keyframes hash-tablets {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(250px, 250px) rotate(20deg);
+    }
+}
+
+@keyframes hooks-tablets {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(250px, -35px) rotate(20deg);
+    }
+}
+
+@keyframes div-1-phones {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes div-2-phones {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        left: 0;
+        transform: translate(80vw, -520px) rotate(-20deg);
+    }
+}
+
+@keyframes slash-phones {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(450px, -550px) rotate(-20deg);
+    }
+}
+
+@keyframes hash-phones {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(210px, -475px) rotate(20deg);
+    }
+}
+
+@keyframes hooks-phones {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(250px, -525px) rotate(20deg);
+    }
+}

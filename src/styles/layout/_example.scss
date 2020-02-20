@@ -1,0 +1,105 @@
+.example {
+    background: #fbfbfb;
+
+    .example__container {
+        align-items: center;
+    }
+    
+    .example__slider {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 100px;
+        position: relative;
+        width: 90%;
+    }
+    
+    .slider__slides {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+    .slider__slides .slick-slide {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    
+    .arrows__btn {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+        border: none;
+        transition: .3s;
+        cursor: pointer;
+        top: 20%;
+        outline: none;
+        opacity: .5;
+
+        @include phones() {
+            display: none;
+        }
+    }
+    
+    .arrows__btn--left {
+        left: 0;
+        background-image: url('../images//arrows/left.png');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .arrows__btn--right {
+        right: -30px;
+        background-image: url('../images//arrows/right.png');
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    .arrows__btn:hover {
+        opacity: 1;
+    }
+    
+    .slider__slide {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 15px;
+        margin-left: 15px;
+
+        @include phones() {
+            margin: 0;
+        }
+    }
+
+    .slider__slides .slick-slide {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .slick-dots li button:before {
+        font-size: 30px;
+    }
+    
+    .slide__img {
+        width: 100%;
+    }
+    
+    .slide__text {
+        font-size: 20px;
+        font-weight: 500;
+        color: #8993ad;
+    }
+
+    .example__btn {
+        @include phones() {
+            width: 100%;
+        }
+    }
+}

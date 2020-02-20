@@ -1,0 +1,86 @@
+.header {
+    padding: 30px 0;
+    background: #fbfbfb;
+
+    .header__container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .header__burger {
+        display: none;
+
+        @include tablets() {
+            display: flex;
+            border: none;
+            background: none;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 20px;
+            background: url('../images//burger.png') center center no-repeat;
+            background-size: contain;
+        }
+
+        @include phones() {
+            width: 24px;
+            padding: 0;
+        }
+    }
+
+    .burger__img {
+        @include tablets() {
+            width: 100%;
+        }
+    }
+    
+    .header__menu {
+        display: flex;
+
+        @include tablets() {
+            display: none;
+        }
+    }
+    
+    .menu__link {
+        font-size: 16px;
+        color: #1f1f24;
+        margin-right: 30px;
+    }
+    
+    .header__callback {
+        display: flex;
+        align-items: center;
+    }
+
+    .callback__btn {
+        @include phones() {
+            display: none;
+        }
+    }
+    
+    .callback__btn--mob {
+        display: none;
+
+        @include phones() {
+            display: flex;
+            border: 1px solid #fa0f8a;
+            border-radius: 50%;
+            background: none;
+            height: 26px;
+            width: 26px;
+            padding: 0;
+            align-items: center;
+            justify-content: center;
+            background: url('../images//icons/phone.png') center center no-repeat;
+            background-size: 11px 11px;
+        }
+    }
+    
+    .callback__phone {
+        font-size: 25px;
+        font-weight: 700;
+        margin-right: 30px;
+    }
+}
