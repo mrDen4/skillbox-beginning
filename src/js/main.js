@@ -8,7 +8,6 @@ $(function() {
         autoplaySpeed: 2000,
         prevArrow: $('.arrows__btn--left'),
         nextArrow: $('.arrows__btn--right'),
-        autoplay: false,
         responsive: [
             {
               breakpoint: 820,

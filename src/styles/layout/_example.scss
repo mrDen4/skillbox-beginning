@@ -68,11 +68,14 @@
     
     .slider__slide {
         width: 25%;
-        height: 180px;
+        // height: 180px;
         display: flex;
         flex-direction: column;
         margin-right: 15px;
         margin-left: 15px;
+        overflow: hidden;
+        align-items: center;
+        text-align: center;
 
         @include phones() {
             margin: 0;
@@ -87,14 +90,21 @@
     .slick-dots li button:before {
         font-size: 30px;
     }
-    
-    .slide__img {
-        height: 100%;
+
+    .slide__wrap-img {
+        height: 165px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @include phones() {
             height: initial;
-            width: 100%;
         }
+    }
+    
+    .slide__img {
+        width: 100%;
     }
     
     .slide__text {
