@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/styles/main.css">
     <script src="./assets/scripts/jquery.js"></script>
     <script src="./assets/scripts/slick.js"></script>
+    <script src="./assets/scripts/jquery.maskedinput.min.js"></script>
     <script src="./assets/scripts/main.js"></script>
 </head>
 
@@ -159,18 +160,18 @@
     <div class="popup">
         <button class="popup__exit">&times;</button>
         <h2 class="title popup__title">Заказать звонок</h2>
-        <form method="POST" class="popup__form">
+        <form action="https://echo.htmlacademy.ru/" method="POST" class="popup__form">
             <div class="form__row">
                 <label for="name" class="row__label">Имя</label>
-                <input type="text" name="name" id="name" class="form__inp" placeholder="Имя" required>
+                <input type="text" name="name" id="name" class="form__inp" placeholder="Иван" required>
             </div>
             <div class="form__row">
                 <label for="email" class="row__label">E-mail</label>
-                <input type="text" name="email" id="email" class="form__inp" placeholder="E-mail" required>
+                <input type="email" name="email" id="email" class="form__inp" placeholder="example@mail.ru" required>
             </div>
             <div class="form__row">
                 <label for="tel" class="row__label">Телефон</label>
-                <input type="text" name="tel" id="tel" class="form__inp" placeholder="Телефон" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" maxlength="18" required>
+                <input type="text" name="tel" id="tel" class="form__inp" placeholder="8(999) 999-99-99" maxlength="18" required>
             </div>
             <button class="btn form__btn">Заказать звонок</button>
         </form>

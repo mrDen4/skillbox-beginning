@@ -321,7 +321,7 @@ section {
     transform: translate(0); }
   100% {
     left: 0;
-    transform: translate(80vw, -520px) rotate(-20deg); } }
+    transform: translate(80vw, -490px) rotate(-20deg); } }
 
 @keyframes slash-phones {
   0% {
@@ -417,7 +417,7 @@ section {
     cursor: pointer;
     top: 20%;
     outline: none;
-    opacity: .5; }
+    opacity: .9; }
     @media screen and (max-width: 550px) {
       .example .arrows__btn {
         display: none; } }
@@ -435,6 +435,7 @@ section {
     opacity: 1; }
   .example .slider__slide {
     width: 25%;
+    height: 180px;
     display: flex;
     flex-direction: column;
     margin-right: 15px;
@@ -448,7 +449,11 @@ section {
   .example .slick-dots li button:before {
     font-size: 30px; }
   .example .slide__img {
-    width: 100%; }
+    height: 100%; }
+    @media screen and (max-width: 550px) {
+      .example .slide__img {
+        height: initial;
+        width: 100%; } }
   .example .slide__text {
     font-size: 20px;
     font-weight: 500;
@@ -615,7 +620,8 @@ section {
     top: 50%; }
     @media screen and (max-width: 550px) {
       .popup--active {
-        left: 0; } }
+        left: 0;
+        top: 0; } }
   .popup .form__row {
     display: flex;
     flex-direction: column;
@@ -695,3 +701,16 @@ section {
   justify-content: center; }
   .burger-popup__nav .nav__link {
     margin-bottom: 20px; }
+
+.popup__exit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 35px;
+  cursor: pointer;
+  transition: .3s; }

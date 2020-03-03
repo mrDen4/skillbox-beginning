@@ -59,4 +59,7 @@ $(function() {
       $('body,html').animate({scrollTop: top}, 1500);
     });
 
+    $(function() {
+      $('#tel').mask('8(999) 999-99-99');
+    });
 });

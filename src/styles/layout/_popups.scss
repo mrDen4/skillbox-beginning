@@ -27,6 +27,7 @@
 
         @include phones() {
             left: 0;
+            top: 0;
         }
     }
 
@@ -131,4 +132,18 @@
     .nav__link {
         margin-bottom: 20px;
     }
+}
+
+.popup__exit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 35px;
+    cursor: pointer;
+    transition: .3s;
 }
