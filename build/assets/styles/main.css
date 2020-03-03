@@ -653,12 +653,15 @@ section {
     justify-content: center;
     flex-direction: column;
     width: 100%; }
-  .popup .form__btn {
-    margin-top: 20px; }
   .popup input:invalid:not(:placeholder-shown) {
     border: 1px solid red; }
   .popup input:valid:not(:placeholder-shown) {
     border: 1px solid green; }
+  .popup .form__btn {
+    margin-top: 20px;
+    border: none; }
+    .popup .form__btn:valid:not(:placeholder-shown) {
+      border: none; }
 
 .bg {
   position: fixed;

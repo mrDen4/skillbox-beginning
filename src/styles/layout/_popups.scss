@@ -73,13 +73,18 @@
         flex-direction: column;
         width: 100%;
     }
-    
-    .form__btn {
-        margin-top: 20px;
-    }
 
     input:invalid:not(:placeholder-shown) {border: 1px solid red;}
     input:valid:not(:placeholder-shown) {border: 1px solid green;}
+
+    .form__btn {
+        margin-top: 20px;
+        border: none;
+
+        &:valid:not(:placeholder-shown) {
+            border: none;
+        }
+    }
 }
 
 .bg {
