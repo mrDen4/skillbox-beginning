@@ -47,6 +47,11 @@
         font-size: 16px;
         color: #1f1f24;
         margin-right: 30px;
+        transition: .3s;
+
+        &:hover {
+            color: #fc557c;
+        }
     }
     
     .header__callback {

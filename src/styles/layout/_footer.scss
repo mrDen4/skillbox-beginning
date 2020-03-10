@@ -47,6 +47,11 @@
         font-size: 18px;
         font-weight: 400;
         margin-bottom: 15px;
+        transition: .3s;
+
+        &:hover {
+            color: #fc557c;
+        }
     }
     
     .footer__contacts {
@@ -60,6 +65,11 @@
         font-size: 25px;
         color: #000000;
         margin-bottom: 35px;
+        transition: .3s;
+
+        &:hover {
+            color: #fc557c;
+        }
 
         @include phones() {
             font-size: 20px;

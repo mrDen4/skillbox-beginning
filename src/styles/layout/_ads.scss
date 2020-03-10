@@ -2,6 +2,7 @@
     padding: 86px 0;
     background-color: #ebebeb;
     background-image: linear-gradient(13deg, #ff8f5a 0%, #ff2f96 99%, #ff2f96 100%);
+    position: relative;
 }
 
 .ads__container {
@@ -32,5 +33,62 @@
     @include phones() {
         font-size: 15px;
         width: 100%;
+    }
+}
+
+.ads__bg {
+    position: absolute;
+    font-size: 37px;
+    color: #fff;
+
+    &--1 {
+        left: 80px;
+        top: 40px;
+        transform: rotate(30deg);
+    }
+
+    &--2 {
+        left: 100px;
+        bottom: 40px;
+        transform: rotate(20deg);
+
+        @include tablets() {
+            display: none;
+        }
+    }
+    
+    &--3 {
+        right: 100px;
+        top: 40px;
+        transform: rotate(-30deg);
+
+        @include tablets() {
+            bottom: 40px;
+            top: initial;
+        }
+    }
+
+    &--4 {
+        right: 200px;
+        bottom: 10px;
+        transform: rotate(30deg);
+
+        @include tablets() {
+            right: 40%;
+        }
+    }
+
+    &--5 {
+        right: 30px;
+        bottom: 50px;
+        transform: rotate(-15deg);
+
+        @include tablets() {
+            display: none;
+        }
+    }
+
+    @include phones() {
+        display: none;
     }
 }
