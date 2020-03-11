@@ -26,7 +26,7 @@
         font-weight: 400;
         margin: 0;
         margin-bottom: 20px;
-        z-index: 10;
+        z-index: 5;
     
         @include tablets() {
             font-size: 54px;
@@ -43,6 +43,7 @@
         color: #8993ad;
         margin: 0;
         margin-bottom: 45px;
+        z-index: 5;
     
         @include tablets() {
             font-size: 20px;
@@ -54,6 +55,8 @@
     }
 
     .hero__btn {
+        z-index: 5;
+
         @include tablets-phones() {
             width: 100%;
         }
@@ -257,7 +260,7 @@
 
     100% {
         left: 0;
-        transform: translate(80vw, -480px) rotate(-20deg);
+        transform: translate(70vw, -480px) rotate(-20deg);
     }
 }
 
@@ -287,6 +290,6 @@
     }
 
     100% {
-        transform: translate(260px, -525px) rotate(20deg);
+        transform: translate(260px, -490px) rotate(20deg);
     }
 }

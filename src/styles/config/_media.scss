@@ -27,3 +27,9 @@
       @content;
     }
   }
+
+  @mixin portrait {
+    @media (max-height: 500px), screen and (orientation: portrait) {
+      @content;
+    }
+  }

@@ -6,12 +6,12 @@
     justify-content: center;
     width: 400px;
     height: 500px;
-    top: -50%;
+    top: -100%;
     left: 50%;
     margin-top: -250px;
     margin-left: -200px;
     background: #fff;
-    z-index: 10;
+    z-index: 60;
     transition: .3s;
 
     @include phones() {
@@ -22,12 +22,21 @@
         top: 0;
     }
 
+    @include portrait() {
+        height: 100%;
+    }
+
     &--active {
         top: 50%;
 
         @include phones() {
             left: 0;
             top: 0;
+        }
+
+        @include portrait() {
+            top: 0;
+            margin-top: 0;
         }
     }
 
@@ -64,6 +73,10 @@
     .popup__title {
         font-size: 36px;
         margin-bottom: 40px;
+
+        @include portrait() {
+            margin-bottom: 20px;
+        }
     }
     
     .popup__form {
@@ -99,6 +112,7 @@
 
 .bg--active {
     width: 100%;
+    z-index: 50;
 }
 
 .burger-popup {
@@ -118,7 +132,7 @@
         margin-left: -125px;
         background: #fff;
         transition: .3s;
-        z-index: 10;
+        z-index: 60;
     }
 
     &--active {

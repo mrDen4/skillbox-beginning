@@ -104,7 +104,12 @@
     }
     
     .slide__img {
-        width: 100%;
+        height: 100%;
+
+        @include phones() {
+            height: initial;
+            width: 100%;    
+        }
     }
     
     .slide__text {
