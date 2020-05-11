@@ -51,6 +51,11 @@ $(function() {
       $('.burger-popup').removeClass('burger-popup--active');
     });
 
+    $('.bg, .success-popup__exit').on('click', function() {
+      $('.bg').removeClass('bg--active');
+      $('.success-popup').removeClass('success-popup');
+    });
+
     $(".header__menu").on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
@@ -60,5 +65,19 @@ $(function() {
 
     $(function() {
       $('#tel').mask('8(999) 999-99-99');
+    });
+
+    $(".popup__form").submit(function() {
+      $.ajax({
+        type: "POST",
+        url: "./assets/php/mail.php",
+        data: $(this).serialize()
+      }).done(function() {
+        $(this).find("input").val("");
+        $('.success-popup').addClass('success-popup--active');
+        $('.popup').removeClass('popup--active');
+        $(".popup__form").trigger("reset");
+      });
+      return false;
     });
 });
