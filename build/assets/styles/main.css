@@ -711,7 +711,8 @@ section {
   .popup .form__inp {
     width: 90%;
     padding: 10px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    border: 1px solid #ff4e2e; }
   .popup .popup__exit {
     display: flex;
     align-items: center;
@@ -760,6 +761,12 @@ section {
   margin-top: -100px;
   margin-left: -250px;
   z-index: 60; }
+  @media screen and (max-width: 550px) {
+    .success-popup {
+      width: 100%;
+      left: 0;
+      margin-left: 0;
+      text-align: center; } }
   .success-popup--active {
     top: 50%;
     background: #fff;

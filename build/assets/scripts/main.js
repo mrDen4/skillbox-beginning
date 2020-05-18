@@ -53,10 +53,17 @@ $(function() {
 
     $('.bg, .success-popup__exit').on('click', function() {
       $('.bg').removeClass('bg--active');
-      $('.success-popup').removeClass('success-popup');
+      $('.success-popup').removeClass('success-popup--active');
     });
 
     $(".header__menu").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1500);
+    });
+
+    $(".footer__nav").on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
